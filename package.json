@@ -1,0 +1,25 @@
+{
+  "name": "react-csv-to-table-example",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "react": "^16.8.2",
+    "react-csv-to-table": "0.0.2",
+    "react-dom": "^16.8.2"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.js",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
