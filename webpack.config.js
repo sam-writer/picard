@@ -6,7 +6,7 @@ module.exports = {
     './src/index.js'
   ],
   output: {
-    path: __dirname + '/public',
+    path: __dirname + '/docs',
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -23,6 +23,6 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: './public',
+    contentBase: './docs',
   }
 }
