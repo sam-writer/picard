@@ -11,7 +11,8 @@
   },
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js",
-    "build": "webpack"
+    "build": "webpack",
+    "deploy": "webpack && now"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
