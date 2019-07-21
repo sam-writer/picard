@@ -1,6 +1,36 @@
-<!doctype html>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <title>Picard Watchlist</title>
+</head>
+
 <body>
   <div id="root"></div>
   <script src="./bundle.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script>
+    function ready(fn) {
+      if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        fn();
+      } else {
+        document.addEventListener('DOMContentLoaded', fn);
+      }
+    }
+
+    // God, I really suck and JavaScript if I need a hack like this...
+    ready(() => {
+      Array.from(document.getElementsByTagName("td")).map(x => {
+        if (x.innerText.slice(0, 4) == "http") {
+          x.innerHTML = `<a target="_blank" href="${x.innerText}">${x.innerText}</a>`
+        }
+      })
+    })
+  </script>
 </body>
+
+</html>
