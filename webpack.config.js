@@ -15,7 +15,11 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loader: "babel-loader"
-      }
+      },
+      {
+        test: /\.csv$/i,
+        use: 'raw-loader',
+      },
     ]
   },
   devServer: {

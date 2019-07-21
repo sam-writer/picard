@@ -1,27 +1,23 @@
 import React from "react";
 import { CsvToHtmlTable } from "react-csv-to-table";
 
-import { sampleData } from "./sample";
+import picardCsv from "./picard.csv";
 
 export const App = () => {
   return (
     <div className="container">
 
-      <h2>Simple example to demonstrate CSV to HTML</h2>
+      <h2>Picard Watchlist</h2>
 
-      Your Table would look like below <b>styled with bootstrap</b>
-      <br/><br/>
+      <p>I am stoked about the upcoming series <a href="https://arstechnica.com/gaming/2019/07/once-again-engage-picard-trailer-feels-like-the-next-next-generation/">Picard</a>.
+      I found some watchlists, but needed a spreadsheet to make sure I watched in order.</p>
+      <p>This list is open-source, so if you have edits, open a Pull Request <a href="ADD LINK">here</a>.</p>
+      <br /><br />
       <CsvToHtmlTable
-        data={sampleData}
+        data={picardCsv}
         csvDelimiter=","
         tableClassName="table table-striped table-hover"
       />
-
-
-      <h2>Your CSV data looks like below</h2>
-      <pre>
-      {sampleData}
-      </pre>
     </div>
   );
 };
